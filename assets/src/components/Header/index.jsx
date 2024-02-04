@@ -1,11 +1,13 @@
 // import { useState } from 'react'
 import "./style.css";
+import Hero from "../Hero";
 
 function Header() {
   return (
-    <div className="Header">
-      {/* build component here */}
-    </div>
+    <header>
+      Header
+      <Hero />
+    </header>
   );
 }
 

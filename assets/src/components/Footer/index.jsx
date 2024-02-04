@@ -4,7 +4,7 @@ import "./style.css";
 function Footer() {
   return (
     <div className="Footer">
-      {/* build component here */}
+      Footer
     </div>
   );
 }

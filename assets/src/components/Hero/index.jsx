@@ -4,7 +4,7 @@ import "./style.css";
 function Hero() {
   return (
     <div className="Hero">
-      {/* build component here */}
+      Hero / Jumbotron
     </div>
   );
 }
