@@ -1,12 +1,12 @@
 // import { useState } from 'react'
 import "./style.css";
 
-function Hero() {
+function Header() {
   return (
-    <div className="Hero">
+    <div className="Header">
       {/* build component here */}
     </div>
   );
 }
 
-export default Hero;
+export default Header;
