@@ -1,9 +1,10 @@
 // import { useState } from 'react'
+import React from "react";
 import "./style.css";
 
-function Main() {
+function Test() {
   return (
-    <main className="main">
+    <div className="test">
       Main
       <select name="cars" id="cars">
         <option value="volvo">Volvo</option>
@@ -11,8 +12,8 @@ function Main() {
         <option value="opel">Opel</option>
         <option value="audi">Audi</option>
       </select>
-    </main>
+    </div>
   );
 }
 
-export default Main;
+export default Test;
