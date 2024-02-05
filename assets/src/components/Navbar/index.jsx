@@ -8,9 +8,6 @@ function Navbar() {
       <div id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link to="/" end>Home</Link>
-          </li>
-          <li className="nav-item">
             <Link to="/about">About Me</Link>
           </li>
           <li className="nav-item">
