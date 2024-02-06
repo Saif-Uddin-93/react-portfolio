@@ -1,12 +1,12 @@
 import * as React from "react";
-import { BrowserRouter, Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div id="navbarNav">
-        <ul className="navbar-nav">
+        <ul className="navbar-nav d-flex flex-row">
           <li className="nav-item">
             <Link to="/about">About Me</Link>
           </li>
