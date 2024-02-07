@@ -2,7 +2,7 @@
 import React from "react";
 import "./style.css";
 
-function Test() {
+function Testing_component() {
   return (
     <div className="test">
       Main
@@ -16,4 +16,4 @@ function Test() {
   );
 }
 
-export default Test;
+export default Testing_component;

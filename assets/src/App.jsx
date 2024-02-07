@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-import "./App.css";
+// import "./App.css";
 import React from 'react';
 import Wrapper from "./components/Wrapper"
 import Header from "./components/Header";
