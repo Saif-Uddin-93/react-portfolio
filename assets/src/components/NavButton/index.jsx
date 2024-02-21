@@ -9,7 +9,6 @@ function NavButton(props){
         makeCircleNavBtn();
     }, [])
 
-
     function makeCircleNavBtn(){
         const e = document.getElementById(props.id)
         const computedStyle = window.getComputedStyle(e);

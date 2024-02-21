@@ -16,8 +16,8 @@ function Home (){
         {
         NavBtnArray.map((btn, index)=>{
             return (<NavButton
-            key={index+1}
-            id={index+1}
+            key={`${btn[1]}-link`}
+            id={`${btn[1]}-link`}
             nav={btn[0]}
             text={btn[1]}
             />
