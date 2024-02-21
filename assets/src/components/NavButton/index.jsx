@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 
 
 function NavButton(props){
+    const [height, setHeight] = useState('')
+
+    useEffect(()=>{
+        makeCircleNavBtn();
+    }, [])
+
+
+    function makeCircleNavBtn(){
+        const e = document.getElementById(props.id)
+        const computedStyle = window.getComputedStyle(e);
+        const width = computedStyle.width;
+        setHeight(width)
+    }
     
     const navigate = useNavigate();
     const buttonStyle = {
         borderRadius: "50%",
         width: "fit-content",
-        height: props.height,
+        height: height,
         textAlign: "center",
         margin: "1rem",
     }
