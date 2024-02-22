@@ -1,5 +1,6 @@
 import React from "react";
 import NavButton from "../components/NavButton";
+import Hero from "../components/Hero";
 
 function Home (){
 
@@ -9,12 +10,36 @@ function Home (){
         ["Contact", "Contact"],
         ["CV", "CV"],
     ]
+
+    const logoStyle = {
+        position: 'relative',
+        border: '1px black solid',
+        display: 'inline-block ',
+        textAlign: 'center',
+        top:'30vh',
+        left: '10vw',
+        color: 'black',
+    }
+
+    const testStyle = (posArray) => {
+        
+        return {
+            position: 'absolute',
+            top: posArray.top,
+            right: posArray.right,
+            bottom: posArray.bottom,
+            left: posArray.left,
+            textAlign: 'center',
+            width: '100%',
+    }}
     
     return (<>
+        <Hero /> 
         HOME
         World icon with nav buttons around icon image
-        {
-        NavBtnArray.map((btn, index)=>{
+        
+        { 
+        NavBtnArray.map((btn)=>{
             return (<NavButton
             key={`${btn[1]}-link`}
             id={`${btn[1]}-link`}
@@ -22,7 +47,13 @@ function Home (){
             text={btn[1]}
             />
         )})}
-        
+        <h3 style={logoStyle}>
+            LOGO
+            <div
+            style={testStyle({top:'-4rem',right:'',bottom:'',left:''})}>
+                1
+            </div>
+        </h3>
     </>)
 }
 

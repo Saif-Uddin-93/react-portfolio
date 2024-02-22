@@ -8,6 +8,9 @@ function Navbar() {
       <div id="navbarNav">
         <ul className="navbar-nav d-flex flex-row">
           <li className="nav-item">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="nav-item">
             <Link to="/about">About Me</Link>
           </li>
           <li className="nav-item">
