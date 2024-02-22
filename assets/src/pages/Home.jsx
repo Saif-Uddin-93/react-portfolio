@@ -3,6 +3,13 @@ import NavButton from "../components/NavButton";
 
 function Home (){
 
+    const NavBtnArray = [
+        ["About", "About"],
+        ["Projects", "Projects"],
+        ["Contact", "Contact"],
+        ["CV", "CV"],
+    ]
+
     const logoStyle = {
         position: 'absolute',
         border: '1px black solid',
@@ -13,25 +20,29 @@ function Home (){
         color: 'black',
     }
 
-    const testStyle = (posArray) => {
-
+    const testStyle = (index) => {
+        const {x} = btnPosX(index), {y} = btnPosY(index);
+        console.log(`${y} ${x}`)
         return {
             position: 'absolute',
-            top: posArray.top,
-            right: posArray.right,
-            bottom: posArray.bottom,
-            left: posArray.left,
-            inset: `${posArray.yAxis} ${posArray.xAxis}`,
+            inset: `${y}rem ${x}rem`,
             textAlign: 'center',
             width: '100%',
     }}
 
-    const NavBtnArray = [
-        ["About", "About"],
-        ["Projects", "Projects"],
-        ["Contact", "Contact"],
-        ["CV", "CV"],
-    ]
+    function calcAngle(arr, index){
+        return (360/(arr.length))*index
+    }
+
+    const btnPosX = (index, radius=10)=>{
+        const x = radius * Math.cos(calcAngle(NavBtnArray, index))
+        return {x}
+    }
+
+    const btnPosY = (index, radius=10)=>{
+        const y = radius * Math.sin(calcAngle(NavBtnArray, index))
+        return {y}
+    }
     
     return (<>
         HOME
@@ -48,22 +59,34 @@ function Home (){
         }
         <h3 style={logoStyle}>
             LOGO
-            <div
-            style={testStyle({yAxis:'-4rem', xAxis:'0'})}>
+            {
+                NavBtnArray.map((btn, index)=>(
+                    <div
+                        key={index}
+                        style={
+                            testStyle(index)
+                        }
+                    >
+                        {btn[0]}
+                    </div>
+                ))
+            }
+            {/* <div
+            style={testStyle({y:'-4rem', x:'0rem'})}>
                 1
             </div>
             <div
-            style={testStyle({yAxis:'0', xAxis:'4rem'})}>
+            style={testStyle({y:'0rem', x:'4rem'})}>
                 3
             </div>
             <div
-            style={testStyle({yAxis:'4rem', xAxis:'0'})}>
+            style={testStyle({y:'4rem', x:'0rem'})}>
                 6
             </div>
             <div
-            style={testStyle({yAxis:'0', xAxis:'-4rem'})}>
+            style={testStyle({y:'0rem', x:'-4rem'})}>
                 9
-            </div>
+            </div> */}
         </h3>
     </>)
 }
