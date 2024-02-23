@@ -18,6 +18,8 @@ function NavButton(props){
     
     const navigate = useNavigate();
     const buttonStyle = {
+        position: props.style.position,
+        inset: props.style.inset,
         borderRadius: "50%",
         width: "fit-content",
         height: height,
