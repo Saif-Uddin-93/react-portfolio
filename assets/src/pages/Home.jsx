@@ -11,12 +11,13 @@ function Home (){
     ]
 
     const logoStyle = {
-        position: 'absolute',
+        position: 'relative',
         border: '1px black solid',
         display: 'inline-block ',
         textAlign: 'center',
         top:'40%',
         left: '40%',
+        margin: 0,
         color: 'black',
     }
 
@@ -55,24 +56,26 @@ function Home (){
                 />
             )) */
         }
-        <h3 style={logoStyle}>
-            LOGO
-            {
-                NavBtnArray.map((btn, index)=>(
-                    <NavButton
-                        key={`${btn[0]}-link`}
-                        id={`${btn[0]}-link`}
-                        text={btn[0]}
-                        nav={btn[1]}
-                        style={
-                            testStyle(index)
-                        }
-                    />
-                        /* {btn[0]}
-                    </div> */
-                ))
-            }
-        </h3>
+        <div style={{inset: '5px'}}>
+            <h3 style={logoStyle}>
+                LOGO
+                {
+                    NavBtnArray.map((btn, index)=>(
+                        <NavButton
+                            key={`${btn[0]}-link`}
+                            id={`${btn[0]}-link`}
+                            text={btn[0]}
+                            nav={btn[1]}
+                            style={
+                                testStyle(index)
+                            }
+                        />
+                            /* {btn[0]}
+                        </div> */
+                    ))
+                }
+            </h3>
+        </div>
     </>)
 }
 

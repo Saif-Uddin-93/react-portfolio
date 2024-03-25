@@ -9,7 +9,7 @@ import Home from "../../pages/Home";
 
 function Wrapper() {
   return (
-  <main className="wrapper">
+  <main className="wrapper" style={{backgroundColor:'aqua'}}>
     <Routes>
       <Route path="/" end element={<Home />} />
       <Route path="/about" element={<About/>} />

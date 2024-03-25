@@ -24,7 +24,7 @@ function NavButton(props){
         width: "fit-content",
         height: height,
         textAlign: "center",
-        margin: "1rem",
+        margin: 0,
     }
     const buttonText = {
         position: "relative",
@@ -32,7 +32,19 @@ function NavButton(props){
     }
 
     return (<>
-    <button id={props.id} className="nav-button" style={buttonStyle} onClick={()=>navigate(`/${props.nav}`)}><span className="buttonText" style={buttonText}>{props.text}</span></button>
+    <button 
+        id={props.id} 
+        className="nav-button" 
+        style={buttonStyle} 
+        onClick={()=>navigate(`/${props.nav}`)}
+    >
+        <span 
+            className="buttonText" 
+            style={buttonText}
+        >
+            {props.text}
+        </span>
+    </button>
 </>)}
 
 export default NavButton

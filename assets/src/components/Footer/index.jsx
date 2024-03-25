@@ -4,9 +4,9 @@ import "./style.css";
 
 function Footer() {
   return (
-    <div className="Footer">
+    <footer style={{backgroundColor: 'aqua'}}>
       Footer
-    </div>
+    </footer>
   );
 }
 
